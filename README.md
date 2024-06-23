@@ -3,7 +3,7 @@ Many RGBT tracking researches primarily focus on modal fusion design, while over
 
 ## News :sparkles: 
 
-![overall](doc/pic/overall2-roma-simplecolor.png)
+![overall](doc/pic/overall2-Roma-SimpleColor.png)
 ![overall](doc/pic/tracker_result-2.png)
 
 <!-- <html>
