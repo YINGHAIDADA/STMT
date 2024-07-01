@@ -1,0 +1,8 @@
+nohup python tracking/train.py --script stmt --config vitb_256_mae_ce_32x4_ep300 --save_dir ./output --mode multiple --nproc_per_node 4 --use_wandb 0 --vis_gpus 0,1,2,3 >train_stmt-only10-SparseCross.log 2>&1 &
+python tracking/train.py --script stmt --config vitb_256_mae_ce_32x4_ep300 --save_dir ./output --mode multiple --nproc_per_node 4 --use_wandb 0 --vis_gpus 0,1,2,3 >train_stmt-only10.log 2>&1 &
+
+single:
+nohup python tracking/train.py --script stmt --config vitb_256_mae_ce_32x4_ep300 --save_dir ./output --mode single --use_wandb 0 --vis_gpus 0 >train_stmt.log 2>&1 &
+
+test:
+nohup python tracking/test.py stmt vitb_256_mae_ce_32x4_ep300 --runid 25 --dataset_name rgbt210 --threads 2 --vis_gpus 1 --num_gpus 1 >test_stmt-only10_ep51-rgbt210.log 2>&1 & 
